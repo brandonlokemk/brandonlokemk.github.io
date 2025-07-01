@@ -14,7 +14,7 @@ export function DownloadResumeButton ({ className }: { className?: string }) {
     // };
     return (
         <a className={className}
-        href="/Brandon_Resume.pdf"
+        href="/files/Brandon_Resume.pdf"
         download="Brandon_Resume.pdf"
         >
             <Button size={"sm"}>
