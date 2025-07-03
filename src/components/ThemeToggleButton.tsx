@@ -1,13 +1,13 @@
 "use client"
 
 import * as React from "react"
-import { useTheme } from 'next-themes';
+import { useTheme } from './theme-provider';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun } from 'lucide-react';
 
 export function ThemeToggleButton( { className }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,13 +18,13 @@ export function ThemeToggleButton( { className }: { className?: string }) {
 
   return (
     <Button className={className}
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={toggleTheme}
       variant="outline"
       size="sm"
     >
       {/* <Sun className="h-[1.2rem] w-[1.2rem] text-black rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 " /> */}
-      {theme === 'dark' ? <Sun className="h-4 w-4 text-white" /> : <Moon className="h-4 w-4 text-black" />}
+      {isDark ? <Sun className="h-4 w-4 text-white" /> : <Moon className="h-4 w-4 text-black" />}
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

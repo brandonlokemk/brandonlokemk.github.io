@@ -2,8 +2,11 @@
 
 import { Button } from "./ui/button";
 import { FileDown } from "lucide-react"
+import { useTheme } from "@/components/theme-provider";
+import { motion } from "motion/react";
 
-export function DownloadResumeButton ({ className }: { className?: string }) {
+export function DownloadResumeButton () {
+    const {isDark} = useTheme();
     // const handleDownload = () => {
     //     const link = document.createElement('a');
     //     link.href = '/Brandon_Resume.pdf'; // Adjust the path to your resume file
@@ -13,14 +16,18 @@ export function DownloadResumeButton ({ className }: { className?: string }) {
     //     document.body.removeChild(link);
     // };
     return (
-        <a className={className}
+        <a className={`ml-auto rounded-sm`}
         href="/files/Brandon_Resume.pdf"
         download="Brandon_Resume.pdf"
         >
-            <Button size={"sm"}>
-                <FileDown/>
-                Resume
-            </Button>
+            <motion.div
+            whileHover={{ scale: 1.10 }}>
+                <Button className={`${isDark ? 'bg-dark-accent1darker text-dark-text hover:bg-dark-accent1' : 'bg-light-accent1 text-dark-text hover:bg-light-accent1'}`} size={"sm"}>
+                    <FileDown/>
+                    Resume
+                </Button>
+            </motion.div>
+            
         </a>
     )
 }

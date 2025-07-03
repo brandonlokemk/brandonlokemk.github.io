@@ -2,7 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { TooltipArrow } from "@radix-ui/react-tooltip";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill} from "react-icons/ri";
-
+import { motion } from "motion/react";
 
 
 export default function TechBubbles() {
@@ -23,17 +23,20 @@ export default function TechBubbles() {
       <div className="flex justify-center gap-4 flex-wrap p-4">
         {skills.map((skill, index) => (
           <Tooltip key={index}>
-            <TooltipTrigger>
-              <div
-                className={`flex items-center justify-center w-16 h-16 rounded-2xl text-white ${skill.color} transform transition-transform duration-300 hover:scale-110`}
-              >
-                {skill.icon}
-              </div>
-            </TooltipTrigger>
-            <TooltipContent className="text-sm">
-              <TooltipArrow/>
-              <p>{skill.name}</p>
-            </TooltipContent>
+            <motion.div
+                whileHover={{ scale: 1.15 }}>
+              <TooltipTrigger>
+                <div
+                  className={`flex items-center justify-center w-16 h-16 rounded-2xl text-white ${skill.color} transform transition-transform duration-300 hover:scale-110`}
+                  >
+                  {skill.icon}
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="text-sm">
+                <TooltipArrow/>
+                <p>{skill.name}</p>
+              </TooltipContent>
+            </motion.div>
           </Tooltip>
         ))}
       </div>
