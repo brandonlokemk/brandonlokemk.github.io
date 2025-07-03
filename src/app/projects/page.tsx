@@ -88,7 +88,7 @@ export default function Projects() {
       className="pt-5 lg:pt-20 pb-20 px-8 lg:h-[100vh] sm:h-[92vh]"
     >
       <h2
-        className={`text-3xl font-bold mb-3 ${
+        className={`text-center text-3xl font-bold mb-3 ${
           isDark ? "text-dark-text" : "text-light-text"
         }`}
       >

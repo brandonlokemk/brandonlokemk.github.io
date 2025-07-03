@@ -18,7 +18,7 @@ import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
-import { ExternalLink, Github, Calendar, Star, Code} from "lucide-react";
+import { ExternalLink, Github, Code} from "lucide-react";
 const ProjectCard = ({ project }) => {
   const { isDark } = useTheme();
   return (
