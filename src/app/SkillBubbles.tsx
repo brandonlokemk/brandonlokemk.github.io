@@ -3,10 +3,7 @@ import { TooltipArrow } from "@radix-ui/react-tooltip";
 import { FaPython, FaJsSquare, FaJava } from "react-icons/fa"; // Icons from react-icons
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
-// import { IoLogoCss3 } from "react-icons/io5";
-
-
-
+import { motion } from "motion/react";
 
 export default function SkillBubbles() {
   const skills = [
@@ -18,24 +15,26 @@ export default function SkillBubbles() {
     // { name: "CSS", icon: <IoLogoCss3 size={36}/>, color: "bg-blue-400" },
     { name: "SQL", icon: <BsFiletypeSql size={36} className="fill-orange-400"/>, color: "bg-white" }
   ];
-
   return (
     <TooltipProvider delayDuration={100} >
       <div className="flex justify-center gap-4 flex-wrap p-4">
         {skills.map((skill, index) => (
-          <Tooltip key={index}>
-            <TooltipTrigger>
-              <div
-                className={`flex items-center justify-center w-16 h-16 rounded-2xl text-white ${skill.color} transform transition-transform duration-300 hover:scale-110`}
-              >
-                {skill.icon}
-              </div>
-            </TooltipTrigger>
-            <TooltipContent className="text-sm">
-              <TooltipArrow/>
-              <p>{skill.name}</p>
-            </TooltipContent>
-          </Tooltip>
+            <Tooltip key={index}>
+              <motion.div
+                whileHover={{ scale: 1.15 }}>
+                <TooltipTrigger>
+                  <div
+                    className={`flex items-center justify-center w-16 h-16 rounded-2xl text-white ${skill.color} transform transition-transform duration-300`}
+                    >
+                    {skill.icon}
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <TooltipArrow/>
+                  <p>{skill.name}</p>
+                </TooltipContent>
+              </motion.div>
+            </Tooltip>
         ))}
       </div>
     </TooltipProvider>

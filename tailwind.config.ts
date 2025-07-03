@@ -14,12 +14,14 @@ export default {
 		  },
   		colors: {
 			light: {
-				color1: '#fdfbf9',
+				// color1: '#fdfbf9',
+				color1: '#f5f0eb',
 				color2: '#dcdcdc',
 				accent1: '#347494',
 				accent2: '#f05a59',
 				text: '#453a23',
-				navbar: '#dcdcdc'
+				navbar: '#dcdcdc',
+				hover: '#498fb3'
 			},
 			dark: {
 				color1: '#20202a',
@@ -28,7 +30,8 @@ export default {
 				accent2: '#459fcf',
 				text: '#f3f6f6',
 				navbar: '#32323f',
-				accent1darker: '#bc283a'
+				accent1darker: '#bc283a',
+				card: '#18202f'
 			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -41,7 +44,7 @@ export default {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+  				// DEFAULT: 'hsl(var(--primary))',
 				// DEFAULT: '#F9F1F1',
   				foreground: 'hsl(var(--primary-foreground))',
 				light: '#F9F1F1',
