@@ -1,3 +1,4 @@
+'use client';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { TooltipArrow } from "@radix-ui/react-tooltip";
 import { FaReact, FaNodeJs } from "react-icons/fa";
