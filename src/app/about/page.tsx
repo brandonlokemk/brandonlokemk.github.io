@@ -1,3 +1,4 @@
+'use client';
 import SkillBubbles from "../SkillBubbles";
 import TechBubbles from "../TechBubbles";
 import { useTheme } from "@/components/theme-provider";
