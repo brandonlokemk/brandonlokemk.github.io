@@ -1,14 +1,8 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+'use client';
+
 import { useTheme } from "@/components/theme-provider";
 import { motion } from "motion/react";
-type Project = {
+export type Project = {
   title: string;
   description: string;
   technologies: string[];
@@ -98,7 +92,7 @@ export default function Projects() {
             Section in progress!
             </div> */}
       <div className={`border ${isDark ? 'border-slate-600' : 'border-black'} rounded-xl grid gap-5 p-4 md:grid-cols-1 lg:grid-cols-3 overflow-y-auto h-full`}>
-        {projects.map((project) => (
+        {projects.map((project: Project) => (
           <motion.div
             key={project.title}
             className={`h-fit w-fit rounded-xl shadow-lg hover:shadow-2xl`}
