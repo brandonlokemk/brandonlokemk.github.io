@@ -37,7 +37,7 @@ const projects: Project[] = [
             Acts as a platform for users to post and find job listings, enhancing the job search experience.
             Leverages Google Cloud Run for deployment and AWS S3 for storage.
             Currently serving as the main bot in a Telegram Channel with over 14,000 members.`,
-        technologies: ["Python", "Flask", "Google Cloud Run", "AWS S3"],
+        technologies: ["Python", "Flask", "Telegram API", "Google Cloud"],
         liveUrl: "https://t.me/sgparttimetalent",
         githubUrl: "https://github.com/brandonlokemk/telegram-bot",
         // icon: "👁️",
