@@ -11,10 +11,10 @@ export default function About() {
     return (
         <section
             id="about_section"
-            className="pb-8 md:pb-0 md:h-screen pt-8 px-8 flex flex-col items-center overflow-auto"
+            className="pb-8 md:pb-0 md:h-screen pt-12 px-14 flex flex-col items-center overflow-auto"
         >
             <div
-                className={`shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-5 p-14 items-center ${
+                className={`shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-5 px-24 pt-16 pb-20 items-center ${
                     isDark ? "border-slate-400 hover:border-slate-200" : "border-slate-700 hover:border-slate-900"
                 } border rounded-lg`}
             >

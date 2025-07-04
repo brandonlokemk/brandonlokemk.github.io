@@ -24,9 +24,9 @@ export function DownloadResumeButton () {
             whileHover={{ scale: 1.10 }}>
                 <Button className={`${isDark ? 'bg-dark-accent1darker text-dark-text hover:bg-dark-accent1' : 'bg-light-accent1 text-dark-text hover:bg-light-accent1'}`} size={"sm"}>
                     <FileDown/>
-                    <a className="hidden md:block">
+                    <div className="hidden md:block">
                         Resume
-                    </a>
+                    </div>
                 </Button>
             </motion.div>
             
