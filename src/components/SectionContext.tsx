@@ -1,18 +1,26 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, ReactNode } from "react";
 
-export interface SectionContextType {
+interface SectionContextType {
     activeSection: string;
 }
 
-export const defaultSection: SectionContextType = {
-    activeSection: 'hero',
-}
-
-
-export const SectionContext = createContext<SectionContextType>(defaultSection);
-
+const SectionContext = createContext<SectionContextType | undefined>(undefined);
 
 export const useSectionContext = () => {
     const context = useContext(SectionContext);
     return context; // Return undefined if not in provider
+};
+
+export const SectionProvider = ({
+    children,
+    activeSection,
+}: {
+    children: ReactNode;
+    activeSection: string;
+}) => {
+    return (
+        <SectionContext.Provider value={{ activeSection }}>
+            {children}
+        </SectionContext.Provider>
+    );
 };
