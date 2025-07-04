@@ -2,8 +2,10 @@ import Link from 'next/link';
 import { useTheme } from '@/components/theme-provider';
 import { DownloadResumeButton } from '@/components/DownloadResumeButton';
 import { ThemeToggleButton } from '@/components/ThemeToggleButton';
+
 export default function NavBar({ className }: { className?: string }) {
     const { isDark } = useTheme();
+
     return (
         <section className={className}>
             <div className={`flex items-center justify-center p-4 backdrop-blur-lg ${isDark ? 'bg-dark-navbar text-white bg-opacity-60' : 'bg-light-navbar'}`}>

@@ -13,7 +13,6 @@ export type Project = {
 };
 import ProjectCard from "@/components/ProjectCard";
 import projects from "@/app/projects/projects"; // Importing projects from the projects.ts file
-
 // const projects: Project[] = [
 //   {
 //     title: "Osteoporosis Prediction from Retinal Fundus Images Using Machine Learning",
@@ -64,7 +63,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="pt-5 lg:pt-20 pb-10 md:pb-20 px-8 lg:h-screen sm:h-[92vh]"
+      className="pt-5 lg:pt-20 pb-10 md:pb-24 px-8 lg:h-screen sm:h-[92vh]"
     >
       <h2
         className={`text-center text-3xl font-bold mb-5 ${

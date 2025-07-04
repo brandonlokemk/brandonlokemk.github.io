@@ -23,7 +23,7 @@ import { ExternalLink, Code } from "lucide-react";
 const ProjectCard = ({ project }: { project: Project }) => {
   const { isDark } = useTheme();
   return (
-    <Card className={`h-full group overflow-hidden duration-300 transition-shadow ease-in-out cursor-pointer border border-slate-600 ${isDark ? 'hover:border-slate-500' : 'hover:border-slate-900'}`}>
+    <Card className={`h-full group overflow-hidden duration-300 transition-shadow ease-in-out cursor-pointer border border-slate-600 ${isDark ? 'hover:border-slate-400' : 'hover:border-slate-900'}`}>
       {/* Gradient background */}
       <div className={`h-full ${isDark ? "bg-blue-600/40" : "bg-slate-300"}`}>
         <div
