@@ -15,7 +15,7 @@ export default function About() {
         >
             <div
                 className={`shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-5 px-24 pt-16 pb-20 items-center ${
-                    isDark ? "border-slate-400 hover:border-slate-200" : "border-slate-700 hover:border-slate-900"
+                    isDark ? "border-slate-400 hover:border-slate-300 bg-gray-900/20" : "border-slate-500 hover:border-slate-600 bg-white/50"
                 } border rounded-lg`}
             >
                 <h1
