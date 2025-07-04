@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <section id="hero" className="flex flex-col items-center justify-center">
             <div className='flex flex-col items-center justify-center h-screen'>
-                <div className={`bg-gradient-to-b ${isDark ? 'from-[#15151c] to-dark-navbar/60': 'from-white to-light-navbar/60'} absolute h-full w-full `}/>
+                <div className={`bg-gradient-to-b ${isDark ? 'from-[#15151c] to-dark-navbar/60': 'from-light-color1 to-light-navbar/60'} absolute h-full w-full `}/>
                 <h2 className={`text-3xl md:text-5xl z-10 font-bold text-center ${isDark ? 'text-dark-text' : 'text-light-text'}`}>Hello, I&apos;m <span className={`${isDark ? 'text-dark-accent1' : 'text-light-accent1'}`}>Brandon</span>.<br/>Welcome to My Portfolio!</h2>
                 <p className={`px-5 text-center md:px-0 text-xl z-10 mb-4 mt-3 ${isDark ? 'text-dark-text' : 'text-light-text'}`}>Explore my projects and get to know my work.</p>
                 <motion.div

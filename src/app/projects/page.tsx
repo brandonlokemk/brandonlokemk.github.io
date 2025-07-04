@@ -75,7 +75,8 @@ export default function Projects() {
       {/* <div className="flex bg-dark-navbar w-full justify-center items-center min-h-10 rounded-md">
             Section in progress!
             </div> */}
-      <div className={`border ${isDark ? 'border-slate-600' : 'border-black'} rounded-xl grid gap-5 p-4 md:grid-cols-1 lg:grid-cols-3 overflow-y-auto h-[98%]`}>
+      {/* Card grid background */}
+      <div className={`border ${isDark ? 'border-slate-600 bg-gray-900/20' : 'bg-gray-500/10 border-black'} rounded-xl grid gap-5 p-4 md:grid-cols-1 lg:grid-cols-3 overflow-y-auto h-[98%]`}>
         {projects.map((project: Project) => (
           <motion.div
             key={project.title}

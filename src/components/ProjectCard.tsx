@@ -23,12 +23,12 @@ import { ExternalLink, Code } from "lucide-react";
 const ProjectCard = ({ project }: { project: Project }) => {
   const { isDark } = useTheme();
   return (
-    <Card className={`h-full group overflow-hidden duration-300 transition-shadow ease-in-out cursor-pointer border border-slate-600 ${isDark ? 'hover:border-slate-400' : 'hover:border-slate-900'}`}>
+    <Card className={`h-full group duration-300 transition-shadow ease-in-out cursor-pointer border border-slate-600 ${isDark ? 'hover:border-slate-400' : 'hover:border-slate-900'}`}>
       {/* Gradient background */}
       <div className={`h-full ${isDark ? "bg-blue-600/40" : "bg-slate-300"}`}>
         <div
-          className={`rounded flex flex-col h-full ${
-            isDark ? "bg-black opacity-80" : "bg-white"
+          className={`flex flex-col h-full ${
+            isDark ? "bg-black/80" : "bg-white"
           } justify-center items-start p-8 min-h-72`}
         >
           <div
@@ -66,7 +66,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     className={`text-xs ${
                       isDark
                         ? "border-slate-200 text-slate-300 hover:bg-slate-700"
-                        : "border-slate-700 text-slate-900 hover:bg-slate-200"
+                        : "border-slate-700 text-slate-900 hover:bg-gray-300"
                     } transition-colors`}
                   >
                     {tech}
@@ -93,10 +93,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className={`flex gap-0 w-full text-sm hover:scale-105 transition-all duration-300 ${
+                    className={`flex gap-0 w-full text-sm hover:scale-105 transition-all duration-300 border ${
                       isDark
-                        ? "border-gray-200 hover:border-[#181717] hover:bg-[#181717] hover:text-white bg-white text-[#181717]"
-                        : "hover:bg-zinc-700 hover:text-white bg-[#2d333b] text-white"
+                        ? "border-white hover:border-[#383c44] hover:bg-[#383c44] hover:text-white bg-white text-[#181717]"
+                        : "border-[#2d333b] hover:border-gray-600 hover:bg-gray-600 hover:text-white bg-[#2d333b] text-white"
                     } transition-colors`}
                   >
                     {/* <Github className="w-4 h-4 mr-2" /> */}

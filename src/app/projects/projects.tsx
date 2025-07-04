@@ -34,10 +34,10 @@ const projects: Project[] = [
     {
         title: "Telegram SG Job Bot",
         description: `A telegram bot that aims to connect job seekers with job opportunities in Singapore.
-            Acts as a platform for users to post and find job listings, enhancing the job search experience.
-            Leverages Google Cloud Run for deployment and AWS S3 for storage.
-            Currently serving as the main bot in a Telegram Channel with over 14,000 members.`,
-        technologies: ["Python", "Flask", "Telegram API", "Google Cloud"],
+            A platform for users to post and find job listings, enhancing the job search experience.
+            Hosted via Google Cloud Run, storage handled by MySQL via Google Cloud SQL.
+            Currently serving a Telegram channel with over 14,000 members.`,
+        technologies: ["Python", "Flask", "MySQL", "Google Cloud", "Telegram API"],
         liveUrl: "https://t.me/sgparttimetalent",
         githubUrl: "https://github.com/brandonlokemk/telegram-bot",
         // icon: "👁️",
