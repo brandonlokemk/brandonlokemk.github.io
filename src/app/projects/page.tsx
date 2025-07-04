@@ -64,10 +64,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="pt-5 lg:pt-20 pb-10 md:pb-20 px-8 lg:h-[100vh] sm:h-[92vh]"
+      className="pt-5 lg:pt-20 pb-10 md:pb-20 px-8 lg:h-screen sm:h-[92vh]"
     >
       <h2
-        className={`text-center text-3xl font-bold mb-4 ${
+        className={`text-center text-3xl font-bold mb-5 ${
           isDark ? "text-dark-text" : "text-light-text"
         }`}
       >
@@ -76,7 +76,7 @@ export default function Projects() {
       {/* <div className="flex bg-dark-navbar w-full justify-center items-center min-h-10 rounded-md">
             Section in progress!
             </div> */}
-      <div className={`border ${isDark ? 'border-slate-600' : 'border-black'} rounded-xl grid gap-5 p-4 md:grid-cols-1 lg:grid-cols-3 overflow-y-auto h-full`}>
+      <div className={`border ${isDark ? 'border-slate-600' : 'border-black'} rounded-xl grid gap-5 p-4 md:grid-cols-1 lg:grid-cols-3 overflow-y-auto h-[98%]`}>
         {projects.map((project: Project) => (
           <motion.div
             key={project.title}
