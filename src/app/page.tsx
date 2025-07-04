@@ -41,7 +41,7 @@ interface UseSectionScannerProps {
   threshold?: number; // Default: 0
 }
 
-export const useSectionScanner = ({ 
+const useSectionScanner = ({ 
   sections, 
   rootMargin = '-50% 0px -50% 0px',
   threshold = 0 
