@@ -13,6 +13,7 @@ export default function About() {
             id="about_section"
             className="pb-8 md:pb-0 md:h-screen pt-12 px-14 flex flex-col items-center overflow-auto"
         >
+            {/* Pop up section for "About Me" */}
             <div
                 className={`shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-5 px-24 pt-16 pb-20 items-center ${
                     isDark ? "border-slate-400 hover:border-slate-300 bg-gray-900/20" : "border-slate-500 hover:border-slate-600 bg-white/50"

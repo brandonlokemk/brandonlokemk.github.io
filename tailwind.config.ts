@@ -15,7 +15,8 @@ export default {
             colors: {
                 light: {
                     // color1: '#fdfbf9',
-                    color1: "#f5f0eb",
+                    // color1: "#f5f0eb",
+                    color1: '#f7f5f0',
                     color2: "#dcdcdc",
                     accent1: "#347494",
                     accent2: "#f05a59",
