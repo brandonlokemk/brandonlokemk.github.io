@@ -55,11 +55,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </CardDescription>
           </CardHeader>
 
-          <CardContent className=" relative z-10 p-0">
+          <CardContent className=" relative z-10 p-0 w-full">
             {/* Tech stack */}
             <div className="flex flex-wrap gap-2 mb-6">
               {project.technologies?.map((tech: string, index: number) => (
-                <motion.div key={index} whileHover={{ scale: 1.1 }}>
+                <motion.div key={index} whileHover={{ scale: 1.05 }}>
                   <Badge
                     key={index}
                     variant="outline"
@@ -78,10 +78,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {/* Action buttons */}
             <div className="flex gap-3">
               {project.liveUrl && (
-                <a className="flex-1" href={`${project.liveUrl}`}>
+                <a className="flex-1 w-full" href={`${project.liveUrl}`}>
                   <Button
                     size="sm"
-                    className="gap-0 w-full flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-200"
+                    className="hover:scale-105 text-sm gap-0 w-full flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
@@ -93,14 +93,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className={`flex gap-0 w-full ${
+                    className={`flex gap-0 w-full text-sm hover:scale-105 transition-all duration-300 ${
                       isDark
-                        ? "border-slate-600 hover:bg-slate-400"
-                        : "border-slate-300 hover:bg-slate-100"
+                        ? "border-gray-200 hover:border-[#181717] hover:bg-[#181717] hover:text-white bg-white text-[#181717]"
+                        : "hover:bg-zinc-700 hover:text-white bg-[#2d333b] text-white"
                     } transition-colors`}
                   >
                     {/* <Github className="w-4 h-4 mr-2" /> */}
                     <div className="w-4 h-4 mr-2">
+                      {/* GitHub SVG */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
