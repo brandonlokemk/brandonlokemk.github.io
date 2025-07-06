@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         >
           <div
             // className={`w-16 h-16 text-white rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mb-6`}
-            className={`w-16 h-16 text-white rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mb-6`}
+            className={`w-16 h-16 text-white rounded-2xl ${isDark ? 'bg-slate-500' : 'bg-gray-300/80'} flex items-center justify-center mb-6`}
           >
             {project.icon || project.svgPath ? <img className="h-[75%]" src={project.svgPath}/> : <Code className="w-8 h-8"/>}
             {/* {project.icon || <Code className="w-8 h-8" /> || project.svgPath} */}

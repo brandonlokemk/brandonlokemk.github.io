@@ -5,7 +5,7 @@ import { FileDown } from "lucide-react"
 import { useTheme } from "@/components/theme-provider";
 import { motion } from "motion/react";
 
-export function DownloadResumeButton () {
+export function DownloadResumeButton ({className} : {className? : string}) {
     const {isDark} = useTheme();
     // const handleDownload = () => {
     //     const link = document.createElement('a');
@@ -16,20 +16,22 @@ export function DownloadResumeButton () {
     //     document.body.removeChild(link);
     // };
     return (
-        <a className={`ml-auto rounded-sm`}
-        href="/files/Brandon_Resume.pdf"
-        download="Brandon_Resume.pdf"
-        >
-            <motion.div
-            whileHover={{ scale: 1.10 }}>
-                <Button className={`${isDark ? 'bg-dark-accent1darker text-dark-text hover:bg-dark-accent1' : 'bg-light-accent1 text-dark-text hover:bg-[#358cb8]'}`} size={"sm"}>
-                    <FileDown/>
-                    <div className="hidden md:block">
-                        Resume
-                    </div>
-                </Button>
-            </motion.div>
-            
-        </a>
+        <div className={className}>
+            <a className={`rounded-sm`}
+            href="/files/Brandon_Resume.pdf"
+            download="Brandon_Resume.pdf"
+            >
+                <motion.div
+                whileHover={{ scale: 1.10 }}>
+                    <Button className={`${isDark ? 'bg-dark-accent1darker text-dark-text hover:bg-dark-accent1' : 'bg-light-accent1 text-dark-text hover:bg-[#358cb8]'}`} size={"sm"}>
+                        <FileDown/>
+                        <div className="hidden md:block">
+                            Resume
+                        </div>
+                    </Button>
+                </motion.div>
+                
+            </a>
+        </div>
     )
 }
