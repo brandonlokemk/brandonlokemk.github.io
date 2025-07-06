@@ -3,8 +3,6 @@
 import * as React from "react";
 import { useTheme } from "./theme-provider";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
 import { DarkModeToggle } from "@anatoliygatt/dark-mode-toggle";
 
 export function ThemeToggleButton({ className }: { className?: string }) {
