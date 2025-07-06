@@ -22,7 +22,7 @@ const projects: Project[] = [
     {
         title: "Telegram SG Job Bot",
         description: `A telegram bot that aims to connect job seekers with job opportunities in Singapore.
-            Features multi-account management, role-based access, and a virtual currency system to reduce spam operations.
+            Features multi-account management, role-based access, and a virtual currency system.
             Hosted on Google Cloud Run with MySQL database management via Google Cloud SQL.
             
             Currently serving a Telegram channel with over 14,000 members.`,
