@@ -84,7 +84,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     className="hover:scale-105 text-sm gap-0 w-full flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    Live
                   </Button>
                 </a>
               )}
