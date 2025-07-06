@@ -15,7 +15,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     const [isDark, setIsDark] = useState(true);
     const toggleTheme = () => {
         setIsDark(!isDark);
-        console.log(`Theme switched to ${isDark ? "light" : "dark"}`);
+        // console.log(`Theme switched to ${isDark ? "light" : "dark"}`);
     };
 
     return (
